@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Heart } from "phosphor-react";
 import { useEffect, useState } from "react";
 
 export function Project() {
@@ -68,6 +69,7 @@ export function Project() {
 					</div>
 				))}
 			</div>
+			<footer className="flex items-center gap-2 justify-center mt-10 text-gray-200">Feito com <Heart color="#b91c1c"/> por Rafael Feitosa</footer>
 		</div>
 	);
 }
