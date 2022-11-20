@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Zoom } from "react-awesome-reveal";
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { BarLoader } from "react-spinners";
 
 import { Profile } from "./components/Profile/Index";
@@ -26,12 +26,12 @@ export function App() {
 				</div>
 			) : (
 				<div className="p-10 max-sm:p-1 bg-gray-700">
-					<Zoom duration={1e3}>
+					<Fade cascade>
 						<div className="flex max-md:flex-col gap-2 w-full h-full">
 							<Profile />
 							<Project />
 						</div>
-					</Zoom>
+					</Fade>
 				</div>
 			)}
 		</div>
