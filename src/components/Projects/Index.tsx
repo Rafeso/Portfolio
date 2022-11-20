@@ -20,7 +20,7 @@ export function Project() {
 			});
 	}
 	return (
-		<div className="flex flex-col bg-gray-300 gap-3 p-10 max-sm:p-1 border border-emerald-900 rounded-lg ">
+		<div className="flex flex-col bg-gray-300 gap-3 p-10 max-sm:p-5 border border-emerald-900 rounded-lg ">
 			<div className="flex flex-col">
 				<strong className="text-slate-100 text-lg text-center mb-5 text-xl underline decoration-emerald-700">
 					Sobre mim
@@ -45,7 +45,7 @@ export function Project() {
 					</p>
 				</div>
 			</div>
-			<div className="flex items-center justify-center pb-5 w-full bg-gray-">
+			<div className="flex items-center justify-center pb- w-full">
 				<strong className="w-full text-gray-100 text-xl text-center underline decoration-emerald-700 mt-5">
 					Projetos
 				</strong>

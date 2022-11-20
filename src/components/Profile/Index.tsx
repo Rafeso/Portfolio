@@ -2,8 +2,8 @@ import { CaretRight, Envelope, GithubLogo, Globe, LinkedinLogo, MapPin, PhoneCal
 
 export function Profile() {
 	return (
-		<div className="flex flex-col items-start lg:w-[80rem] gap-3">
-			<section className="flex flex-col items-center justify-center rounded-md bg-gray-300 w-full gap-2 p-5">
+		<div className="flex flex-col items-start lg:w-[80rem] gap-2 max-sm:gap-0 max-sm:pb-2">
+			<section className="flex flex-col items-center justify-center rounded-md max-sm:rounded-b-md bg-gray-300 w-full gap-2 p-5">
 				<img
 					className="border-2 rounded-full border-emerald-900"
 					src="https://avatars.githubusercontent.com/u/108298221?v=4"
@@ -18,7 +18,7 @@ export function Profile() {
 				</div>
 			</section>
 
-			<section className="flex flex-col items-start justify-center rounded-md bg-gray-300 p-10 w-full text-gray-200">
+			<section className="flex flex-col items-start justify-center rounded-md max-sm:rounded-none  bg-gray-300 p-10 w-full text-gray-200">
 				<strong className="flex items-center text-lg mb-5 border-b border-emerald-900 w-full">
 					<CaretRight
 						size={20}
@@ -73,7 +73,7 @@ export function Profile() {
 				</ul>
 			</section>
 
-			<section className="flex flex-col text-start justify-center rounded-md bg-gray-300 p-10 w-full text-gray-200">
+			<section className="flex flex-col text-start justify-center rounded-md max-sm:rounded-none  bg-gray-300 p-10 w-full text-gray-200">
 				<strong className="flex items-center text-lg mb-5 border-b border-emerald-900 w-full">
 					<CaretRight
 						size={20}
@@ -133,7 +133,7 @@ export function Profile() {
 				</ul>
 			</section>
 
-			<section className="flex flex-col items-start justify-center rounded-md bg-gray-300 p-10 w-full text-gray-200">
+			<section className="flex flex-col items-start justify-center rounded-md max-sm:rounded-b-md  bg-gray-300 p-10 w-full text-gray-200">
 				<strong className="flex items-center text-lg mb-5 border-b border-emerald-900 w-full">
 					<CaretRight
 						size={20}
