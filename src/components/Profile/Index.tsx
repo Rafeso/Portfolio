@@ -36,6 +36,7 @@ export function Profile() {
 							href="https://github.com/Rafeso"
 							target="_blank"
 							rel="noopener noreferrer"
+							className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-700 transition-all"
 						>
 							Rafeso
 						</a>
@@ -46,27 +47,28 @@ export function Profile() {
 							href="https://www.linkedin.com/in/rafael-feitosa-618472241/"
 							target="_blank"
 							rel="noopener noreferrer"
+							className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-700 transition-all"
 						>
 							rafael-feitosa-souza
 						</a>
 					</li>
 					<li className="flex gap-5 pb-4">
-						<Globe size={25} />
+						<Envelope size={25} />
 						<a
-							href="/"
-							target="_blank"
-							rel="noopener noreferrer"
+							href="mailto:rafaefeitosa@gmail.com"
+							className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-700 transition-all"
 						>
-							Meu Site
+							rafaefeitosa@gmail.com
 						</a>
 					</li>
-					<li className="flex gap-5 pb-4">
-						<Envelope size={25} />
-						<a href="mailto:rafaefeitosa@gmail.com">rafaefeitosa@gmail.com</a>
-					</li>
-					<li className="flex gap-5">
+					<li className="flex gap-5 ">
 						<PhoneCall size={25} />
-						<a href="#">+55 11 93955-5105</a>
+						<a
+							href="https://wa.me/qr/PG34ABCQ76YUB1"
+							className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-700 transition-all"
+						>
+							+55 11 93955-5105
+						</a>
 					</li>
 				</ul>
 			</section>

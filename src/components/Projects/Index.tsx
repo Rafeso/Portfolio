@@ -22,11 +22,11 @@ export function Project() {
 	return (
 		<div className="flex flex-col bg-gray-300 gap-3 p-10 max-sm:p-1 border border-emerald-900 rounded-lg ">
 			<div className="flex flex-col">
-				<strong className="text-slate-100 text-lg text-center mb-5 text-xl">
+				<strong className="text-slate-100 text-lg text-center mb-5 text-xl underline decoration-emerald-700">
 					Sobre mim
 				</strong>
 				<div className="bg-gray-700 p-2 rounded-lg">
-					<p className="text-gray-200 max-sm:text-normal lg:text-justify text-base font-bold">
+					<p className="text-gray-200 max-sm:text-justify lg:text-justify text-base font-bold">
 						Olá, meu nome e Rafael Feitosa de Souza, tenho 19 anos, desde o colégio
 						sempre gostei de tecnologia, acompanhava lançamentos e notícias sobre o
 						que acontecia no mundo, entretanto 2022 foi o ano em que de fato resolvi
@@ -46,22 +46,22 @@ export function Project() {
 				</div>
 			</div>
 			<div className="flex items-center justify-center pb-5 w-full bg-gray-">
-				<strong className="w-full text-gray-100 text-xl text-center">
+				<strong className="w-full text-gray-100 text-xl text-center underline decoration-emerald-700 mt-5">
 					Projetos
 				</strong>
 			</div>
-			<div className="grid grid-flow-cols 2xl:grid-cols-4 xl:grid-cols-2 w-full justify-center gap-6 border-t-2 pt-5 rounded-lg border-gray-500">
+			<div className="grid grid-flow-cols 2xl:grid-cols-4 xl:grid-cols-2 w-full justify-center gap-6 border-t pt-3 border-emerald-900 rounded-lg">
 				{projects.slice(0, 12).map((project) => (
 					<div
 						key={project.id}
-						className="bg-gray-700 rounded-lg p-5 text-center h-[10rem] md:h-[15rem] max-sm:h-[15rem]"
+						className="bg-gray-700 border border-emerald-900 rounded-lg p-5 text-center h-[10rem] md:h-[15rem] max-sm:h-[15rem] shadow-md shadow-emerald-600 "
 					>
 						<a
 							href={project.html_url}
 							target="_blank"
 							rel="noreferrer"
 						>
-							<strong className="flex text-gray-100 text-base mb-2 justify-center">
+							<strong className="flex text-gray-100 text-base mb-2 justify-center hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-900 transition-all">
 								{project.name}
 							</strong>
 						</a>
@@ -69,7 +69,9 @@ export function Project() {
 					</div>
 				))}
 			</div>
-			<footer className="flex items-center gap-2 justify-center mt-10 text-gray-200">Feito com <Heart color="#b91c1c"/> por Rafael Feitosa</footer>
+			<footer className="flex items-center gap-2 justify-center mt-10 text-gray-200">
+				Feito com <Heart color="#b91c1c" /> por Rafael Feitosa
+			</footer>
 		</div>
 	);
 }
