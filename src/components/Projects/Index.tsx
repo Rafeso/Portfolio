@@ -1,24 +1,7 @@
-import axios from "axios";
 import { Heart } from "phosphor-react";
-import { useEffect, useState } from "react";
+import { projects } from "../../data/projects"
 
 export function Project() {
-	const [projects, setProjects] = useState<any[]>([]);
-
-	useEffect(() => {
-		getApiGitRepos();
-	}, []);
-
-	function getApiGitRepos() {
-		axios
-			.get("https://api.github.com/users/Rafeso/repos")
-			.then(function (response) {
-				setProjects(response.data);
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
-	}
 	return (
 		<div className="flex flex-col bg-gray-300 gap-3 p-10 max-sm:p-5 border border-emerald-900 rounded-lg ">
 			<div className="flex flex-col">
@@ -50,22 +33,24 @@ export function Project() {
 					Projetos
 				</strong>
 			</div>
-			<div className="grid grid-flow-cols 2xl:grid-cols-4 xl:grid-cols-2 w-full justify-center gap-6 border-t pt-3 border-emerald-900 rounded-lg">
-				{projects.slice(0, 12).map((project) => (
+			<div className="grid grid-flow-cols 2xl:grid-cols-2 xl:grid-cols-2 w-full justify-center gap-6 border-t pt-3 border-emerald-900 rounded-lg">
+				{projects.map((project) => (
 					<div
 						key={project.id}
-						className="bg-gray-700 border border-emerald-900 rounded-lg p-5 text-center h-[10rem] md:h-[15rem] max-sm:h-[15rem] shadow-md shadow-emerald-600 "
+						className="bg-gray-700 border border-emerald-900 rounded-lg p-5 text-center md:h-full max-sm:h-[15rem] shadow-md shadow-emerald-600 overflow-hidden"
 					>
 						<a
-							href={project.html_url}
+							href={project.repoUrl}
 							target="_blank"
 							rel="noreferrer"
+							className="flex-inline"
 						>
-							<strong className="flex text-gray-100 text-base mb-2 justify-center hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-900 transition-all">
+							<strong className="flex text-gray-100 text-2xl mb-3 justify-center hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-emerald-400 to-emerald-900 transition-all">
 								{project.name}
 							</strong>
 						</a>
-						<p className="text-gray-200 text-sm">{project.description}</p>
+						<p className="text-gray-400 text-base mb-5">{project.description}</p>
+						<img className="flex items-center justify-center overflow-hidden h-[26rem] w-full object-cover object-center" src={`/projects/${project.photo}`} />
 					</div>
 				))}
 			</div>
