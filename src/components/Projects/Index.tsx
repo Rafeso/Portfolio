@@ -50,7 +50,9 @@ export function Project() {
 							</strong>
 						</a>
 						<p className="text-gray-400 text-base mb-5">{project.description}</p>
-						<img className="flex items-center justify-center overflow-hidden h-[26rem] w-full object-cover object-center" src={`/projects/${project.photo}`} />
+						<a href={project.repoUrl}>
+							<img className="flex items-center justify-center overflow-hidden h-[26rem] w-full object-cover object-center" src={`/projects/${project.photo}`} />
+						</a>
 					</div>
 				))}
 			</div>
