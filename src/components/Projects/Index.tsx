@@ -1,5 +1,5 @@
 import { Heart } from "phosphor-react";
-import { projects } from "../../data/projects"
+import { projects } from "../../data/projects";
 
 export function Project() {
 	return (
@@ -51,7 +51,10 @@ export function Project() {
 						</a>
 						<p className="text-gray-400 text-base mb-5">{project.description}</p>
 						<a href={project.repoUrl}>
-							<img className="flex items-center justify-center overflow-hidden h-[26rem] w-full object-cover object-center blur-sm contrast-100 hover:blur-0 hover:scale-[1.02] transition ease-in-out hover:shadow-md hover:shadow-emerald-500/50" src={`/projects/${project.photo}`} />
+							<img
+								className="flex items-center justify-center overflow-hidden h-[26rem] w-full object-cover object-center blur-sm contrast-100 hover:blur-0 hover:scale-[1.02] transition ease-in-out hover:shadow-md hover:shadow-emerald-500/50"
+								src={`/projects/${project.photo}`}
+							/>
 						</a>
 					</div>
 				))}
@@ -62,4 +65,3 @@ export function Project() {
 		</div>
 	);
 }
-

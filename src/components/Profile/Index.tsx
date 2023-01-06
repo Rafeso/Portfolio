@@ -1,4 +1,12 @@
-import { CaretRight, Envelope, GithubLogo, Globe, LinkedinLogo, MapPin, PhoneCall } from "phosphor-react";
+import {
+	CaretRight,
+	Envelope,
+	GithubLogo,
+	LinkedinLogo,
+	MapPin,
+	PhoneCall,
+} from "phosphor-react";
+import { education } from "../../data/education";
 
 export function Profile() {
 	return (
@@ -141,20 +149,16 @@ export function Profile() {
 					/>
 					Educação
 				</strong>
-				<ul className="flex flex-col gap-2">
-					<li className="flex flex-col">
-						<strong>FIAP</strong>
-						<span>2022 - Em curso</span>
-						<p>Análise e Desenvolvimento de Sistemas</p>
-					</li>
-					<li className="flex flex-col">
-						<strong>RocketSeat</strong>
-						<span>2022 - Em curso</span>
-						<p>Ignite</p>
-					</li>
-				</ul>
+				{education.map((courses) => (
+					<ul className="flex flex-col w-full border-b border-emerald-900 mb-2">
+						<li className="flex flex-col mb-2 gap-1">
+							<strong>{courses.institution}</strong>
+							<span>{courses.date}</span>
+							<p>{courses.name}</p>
+						</li>
+					</ul>
+				))}
 			</section>
 		</div>
 	);
 }
-
